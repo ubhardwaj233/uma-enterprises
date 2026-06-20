@@ -500,6 +500,11 @@ nav a {
   width: 100%;
 }
 
+/* also trigger underline when parent .group is hovered (card hover) */
+.group:hover .title-underline::after{
+  width: 100%;
+}
+
 .scroll-progress{
   position: fixed;
   top: 0;

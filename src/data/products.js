@@ -36,15 +36,19 @@ import IronAverage from "../asset/product/iron/average.png";
 import Iron3813C from "../asset/product/iron/3813 c.png";
 import Iron2102 from "../asset/product/iron/2102.png";
 
+import mgImg from "../asset/mg.png";
+import airfryerImg from "../asset/airfryer.png";
+import inductionImg from "../asset/induction.png";
+
 // Product catalog for UMA Enterprises
 // Images are curated Unsplash photos of actual kitchen appliances.
 
 const IMG = {
-  mixer: "https://images.unsplash.com/photo-1723738533602-29830f1fb198?crop=entropy&cs=srgb&fm=jpg&q=85&w=1200",
+  mixer: "https://ibb.co/1YMZj5bn",
   juicer: "https://images.unsplash.com/photo-1610847499832-918a1c3c6811?crop=entropy&cs=srgb&fm=jpg&q=85&w=1200",
-  induction: "https://images.unsplash.com/photo-1623114112815-74a4b9fe505d?crop=entropy&cs=srgb&fm=jpg&q=85&w=1200",
+  induction: "https://ibb.co/PszTnmzn",
   infrared: "https://images.unsplash.com/photo-1631467387522-1c08eba9c123?crop=entropy&cs=srgb&fm=jpg&q=85&w=1200",
-  airfryer: "https://images.unsplash.com/photo-1695089028114-ce28248f0ab9?crop=entropy&cs=srgb&fm=jpg&q=85&w=1200",
+  airfryer: "https://ibb.co/ymfQqbwW",
   otg: "https://images.unsplash.com/photo-1585664811087-47f65abbad64?crop=entropy&cs=srgb&fm=jpg&q=85&w=1200",
   toaster: "https://images.unsplash.com/photo-1583729250536-d5fb10401671?crop=entropy&cs=srgb&fm=jpg&q=85&w=1200",
   sandwich: "https://images.unsplash.com/photo-1528736235302-52922df5c122?crop=entropy&cs=srgb&fm=jpg&q=85&w=1200",
@@ -58,25 +62,19 @@ export const categories = [
     slug: "mixer-grinders",
     name: "Mixer Grinders",
     tagline: "Powerful motors for everyday grinding",
-    image: IMG.mixer,
+    image: mgImg,
   },
   {
     slug: "induction-cookers",
     name: "Induction Cookers",
     tagline: "Smart, fast & energy efficient cooking",
-    image: IMG.induction,
+    image: inductionImg,
   },
   {
     slug: "otg-air-fryers",
     name: "OTG & Air Fryers",
     tagline: "Bake, roast & fry with less oil",
-    image: IMG.airfryer,
-  },
-  {
-    slug: "toasters",
-    name: "Toasters",
-    tagline: "Crisp, golden mornings every day",
-    image: IMG.toaster,
+    image: airfryerImg,
   },
   {
     slug: "irons",

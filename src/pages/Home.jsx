@@ -134,28 +134,32 @@ useEffect(() => {
           </Link>
         </div>
 
-        <div className="grid grid-cols-2 lg:grid-cols-4 gap-3 sm:gap-4">
+        <div className="grid grid-cols-2 lg:grid-cols-4 gap-3 sm:gap-4 auto-rows-fr">
          {categories.map((c, i) => (
             <TiltCard
               as={Link}
               to={`/products/${c.slug}`}
               key={c.slug}
               data-testid={`home-category-card-${c.slug}`}
-              className={`group relative overflow-hidden rounded-2xl border border-border/60 bg-card scroll-fade ${i === 0 ? "lg:col-span-2 lg:row-span-2" : ""}`}
+              className={`group relative overflow-hidden rounded-2xl border border-border/60 bg-card scroll-fade shadow-lg ${i === 0 ? "lg:col-span-2 lg:row-span-2" : ""}`}
               style={{ transitionDelay: `${i * 80}ms` }}
             >
               <div className={`relative ${i === 0 ? "aspect-square lg:aspect-auto lg:h-full" : "aspect-4/3"} overflow-hidden`}>
                 <img src={c.image} alt={c.name} className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" />
-                <div className="absolute inset-0 bg-linear-to-t from-black/70 via-black/10 to-transparent" />
-                <div className="absolute inset-x-0 bottom-0 p-4 sm:p-5 text-white">
-                  <h3 className="font-display text-xl sm:text-2xl title-underline">
-  {c.name}
-</h3>
-                  <p className="text-xs sm:text-sm text-white/80 mt-1 hidden sm:block title-underline">
-  {c.tagline}
-</p>
-                  <div className="mt-3 inline-flex items-center gap-1 text-xs sm:text-sm font-medium text-copper-light">
-                    Shop now <ArrowRight className="h-3.5 w-3.5 transition-transform group-hover:translate-x-1" />
+
+                {/* Strong, consistent bottom gradient for legibility */}
+                <div className="absolute inset-0 bg-linear-to-t from-black/85 via-black/40 to-transparent pointer-events-none" />
+
+                {/* Unified bottom-left text block */}
+                <div className="absolute left-4 bottom-4 sm:left-6 sm:bottom-6 text-white w-[calc(100%-2rem)] sm:w-[calc(100%-3rem)]">
+                  <h3 className="font-display text-2xl sm:text-3xl leading-tight tracking-tight title-underline">
+                    {c.name}
+                  </h3>
+                  <p className="text-sm text-white/85 mt-2 max-w-sm hidden sm:block">
+                    {c.tagline}
+                  </p>
+                  <div className="mt-4 inline-flex items-center gap-2 text-sm font-medium text-copper-light">
+                    Shop now <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-1" />
                   </div>
                 </div>
               </div>
